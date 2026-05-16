@@ -1,5 +1,6 @@
 # Gordo Frutas
 ## Páginas 
-- Home
-- Fruits
-- About
+- Home -> Luiz Fernando
+- Fruits -> Lucas Diniz
+- About -> Henrique
+- Contact -> Nycolas
