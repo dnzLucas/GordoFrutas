@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,42 +8,69 @@
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/contact.css">
 </head>
+
 <body>
     <header class="header">
         <nav>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="fruits.html">Frutas</a></li>
-            <li><a href="about.html">Sobre</a></li>
-            <li><a href="contact.html">Contato</a></li>
-            <img src="src/img/logo.png" class="logo" />
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fruits.html">Frutas</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+
+            <img src="src/img/logo.png" alt="Logo da Gordo Frutas" />
+
         </nav>
-        <main>
-            <section class="contato">
-                <img src="src/img/contact-background.jpg" alt="background-img">
-                <div class="lado-esquerdo">
-                    <h1>Frutas frescas, qualidade e sabor todos os dias.
-Entre em contato com nossa equipe e teremos prazer em atender você!
-</h1>
+    </header>
+    <main>
+        <section class="contato">
+            <img src="src/img/contact-background.jpg" alt="Imagem de frutas frescas">
+            <div class="lado-esquerdo">
+                <h1>Frutas frescas, qualidade e sabor todos os dias.
+                    Entre em contato com nossa equipe e teremos prazer em atender você!
+                </h1>
+            </div>
+
+            <form class="lado-direito">
+
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" required>
                 </div>
 
-                <div class="lado-direito">
-                    <li><input type="text" placeholder="NOME:" required></li>
-                    <li><input type="email" placeholder="E-MAIL:" required></li>
-                    <li><input type="number" placeholder="TELEFONE:" required></li>
-                    <li><input type="text" placeholder="DIGITE SUA MENSAGEM:"></li>
-                    <button type="submit" class ="enviar">ENVIAR</button>
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required>
                 </div>
-            </section>
-            <article class="loja">
-                <h1>Conheça nossa loja</h1>
-                <li><a href="about.html">Sobre</a></li>
-            </article>
-        </main>
-    </header>
+
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" required>
+                </div>
+
+                <div class="campo">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem"></textarea>
+                </div>
+
+                <button type="submit" class="enviar">
+                    ENVIAR MENSAGEM
+                </button>
+
+            </form>
+        </section>
+        <article class="loja">
+            <h1>Conheça nossa loja</h1>
+            <a href="about.html">Sobre</a>
+        </article>
+    </main>
+
     <footer>
-    <p>
-        2026 Gordo Frutas.Frescor, qualidade e sabor em cada detalhe.
-    </p>
-</footer>
+        <p>
+            2026 Gordo Frutas. Frescor, qualidade e sabor em cada detalhe.
+        </p>
+    </footer>
 </body>
+
 </html>
