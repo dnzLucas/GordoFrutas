@@ -10,23 +10,23 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="fruits.html">Frutas</a></li>
-                <li><a href="about.html">Sobre</a></li>
-                <li><a href="contact.html">Contato</a></li>
+    <header>
+        <nav class="Menu-principal">
+            <ul class="menu">
+                <li><a class="opcao" href="index.html">Home</a></li>
+                <li><a class="opcao" href="about.html">Sobre</a></li>
+                <li><a class="opcao" href="fruits.html">Frutas</a></li>
+                <li><a class="opcao" href="contact.html">Contato</a></li>
             </ul>
 
-            <img src="src/img/logo.png" alt="Logo da Gordo Frutas" />
+            <img src="src/img/logo.png" alt="Logo da Gordo Frutas" class="logo" />
 
         </nav>
     </header>
     <main>
         <section class="contato">
-            <img src="src/img/contact-background.jpg" alt="Imagem de frutas frescas">
             <div class="lado-esquerdo">
+                <img src="src/img/contact-background.jpg" alt="Imagem de frutas frescas" class="imagem-frutas">
                 <h1>Frutas frescas, qualidade e sabor todos os dias.
                     Entre em contato com nossa equipe e teremos prazer em atender você!
                 </h1>
@@ -35,23 +35,21 @@
             <form class="lado-direito">
 
                 <div class="campo">
-                    <label for="nome">Nome</label>
                     <input type="text" id="nome" required>
+                    <label for="nome">Nome</label>
                 </div>
-
                 <div class="campo">
-                    <label for="email">E-mail</label>
                     <input type="email" id="email" required>
+                    <label for="email">E-mail</label>
                 </div>
-
                 <div class="campo">
-                    <label for="telefone">Telefone</label>
                     <input type="tel" id="telefone" required>
+                    <label for="telefone">Telefone</label>
                 </div>
 
                 <div class="campo">
+                    <input type="text" id="mensagem">
                     <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem"></textarea>
                 </div>
 
                 <button type="submit" class="enviar">

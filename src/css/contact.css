@@ -1,0 +1,121 @@
+.Menu-principal {
+    background-color: #4E9F2D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 68px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 90px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    flex-wrap: wrap;
+
+}
+
+.opcao {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: #fcfcfc;
+}
+
+.contato {
+    display: flex;
+    align-items: stretch;
+}
+
+
+.lado-esquerdo {
+    flex: 1;
+    position: relative;
+}
+
+.lado-esquerdo .imagem-frutas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.lado-esquerdo h1 {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    color: white;
+    text-shadow: 1px 1px 6px black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    top: 300px;
+}
+
+.lado-direito {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding: 60px 40px;
+    background-color: #aad440;
+}
+
+.enviar {
+    background-color: #4E9F2D;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 500px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background-color: #3a7a20;
+}
+
+.campo {
+    position: relative;
+}
+
+label {
+    color: black;
+    padding: 0 5px;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 1em;
+    pointer-events: none;
+    transition: .3s;
+}
+
+input {
+    color: black;
+    border: 2px solid #224609;
+    background: transparent;
+    border-radius: 5px;
+    width: 100%;
+    
+    box-sizing: border-box;
+    
+    height: 50px;
+    
+    padding: 0 1rem;
+    outline: none;
+    cursor: pointer;
+}
+
+input:focus~label,
+input:valid~label {
+    top: 0;
+    background: #aad440;
+    font-size: 0.7rem;
+}
