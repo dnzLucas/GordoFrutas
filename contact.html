@@ -10,28 +10,25 @@
 </head>
 
 <body>
-    <header>
-        <nav class="Menu-principal">
-            <ul class="menu">
-                <li><a class="opcao" href="index.html">Home</a></li>
-                <li><a class="opcao" href="about.html">Sobre</a></li>
-                <li><a class="opcao" href="fruits.html">Frutas</a></li>
-                <li><a class="opcao" href="contact.html">Contato</a></li>
-            </ul>
-
-            <img src="src/img/logo.png" alt="Logo da Gordo Frutas" class="logo" />
-
-        </nav>
-    </header>
+   <header>
+      <nav aria-label="Menu principal">
+        <a href="index.html">
+          <img src="src/img/logo.png" class="logo" />
+        </a>
+        <ul>
+          <li><a href="fruits.html">Frutas</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header> 
     <main>
         <section class="contato">
             <div class="lado-esquerdo">
-                <img src="src/img/contact-background.jpg" alt="Imagem de frutas frescas" class="imagem-frutas">
                 <h1>Frutas frescas, qualidade e sabor todos os dias.
                     Entre em contato com nossa equipe e teremos prazer em atender você!
                 </h1>
             </div>
-
             <form class="lado-direito">
 
                 <div class="campo">
@@ -48,20 +45,21 @@
                 </div>
 
                 <div class="campo">
-                    <input type="text" id="mensagem">
                     <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem"></textarea>
                 </div>
 
                 <button type="submit" class="enviar">
                     ENVIAR MENSAGEM
                 </button>
-
             </form>
         </section>
         <article class="loja">
             <h1>Conheça nossa loja</h1>
-            <a href="about.html">Sobre</a>
         </article>
+        <div class="local">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114505.72435379567!2d-49.00781530273434!3d-26.251799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deafa479f2814f%3A0x2478f66c31fd2343!2sUNIVILLE%20-%20JOINVILLE%20REGION%20UNIVERSITY%20(FURJ)!5e0!3m2!1sen!2sbr!4v1779065468355!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </main>
 
     <footer>
