@@ -41,6 +41,28 @@ nav a:focus {
     opacity: 0.7;
 }
 
+nav a:focus-visible,
+.skip-link:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 4px;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 8px;
+    background: #1b3b12;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    left: 8px;
+}
+
 footer {
     background: #222;
     color: white;
