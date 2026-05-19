@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: #fffef8;
+    background: #f4f7f1;
     color: #222;
     line-height: 1.6;
 }
@@ -38,7 +38,7 @@ nav ul {
 
 nav a {
     font-size: 1.3rem;
-    color: white;
+    color: #f4f7f1;
     text-decoration: none;
     transition: 0.3s;
     font-weight: bold;
@@ -52,17 +52,17 @@ nav a:focus {
 
 .contato {
     display: flex;
-    align-items: stretch;
+    position: left;
 }
 
 
 .lado-esquerdo {
-    display: flex;
     flex: 1;
     position: relative;
     background-image: url(../img/contact-background.jpg);
     background-size: cover;
     background-position: center;
+    display: flex;
     padding: 10px;
     align-items: center;
     justify-content: center;
@@ -90,7 +90,47 @@ nav a:focus {
     justify-content: center;
     gap: 16px;
     padding: 60px 40px;
+    background-color: #f4f7f1;
+}
+
+.horarios {
+    background-color: #f4f7f1;
+    padding: 60px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo-horarios {
+    max-width: 768px;
     background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.conteudo-horarios h2 {
+    color: #4E9F2D;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.conteudo-horarios p {
+    margin-bottom: 20px;
+    color: #444;
+    line-height: 1.7;
+}
+
+.conteudo-horarios ul {
+    list-style: none;
+    padding: 0;
+}
+
+.conteudo-horarios li {
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: #222;
 }
 
 .titulo-form {
@@ -134,7 +174,7 @@ label {
 input {
     color: black;
     border: 1px solid #c1c3bf;
-    background: transparent;
+    background: white;
     border-radius: 5px;
     width: 100%;
 
@@ -164,14 +204,12 @@ input:valid~label {
     display: flex;
     justify-content: center;
     padding: 30px;
-    background-color: white;
+    background-color: #f4f7f1;
 }
 
 
-
-
 .campo textarea {
-    width: 900px;
+    width: 100%;
     height: 100px;
     border: 1px solid #c1c3bf;
     color: black;
@@ -182,8 +220,19 @@ input:valid~label {
 }
 
 .local {
-    position: relative;
-    left: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 30px;
+}
+
+
+.local iframe {
+    width: 900px;
+    height: 300px;
+    max-width: 100%;
+    border-radius: 10px;
 }
 
 footer {
