@@ -1,18 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Gordo Frutas</title>
-    <link rel="stylesheet" href="src/css/reset.css">
-    <link rel="stylesheet" href="src/css/about.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre | Gordo Frutas</title>
+    <meta name="description" content="Conheça a história, os valores e o fundador da Gordo Frutas, frutaria referência em qualidade em Joinville desde 2005." />
+    <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/about.css" />
+  </head>
+  <body>
     <header>
-
+      <nav aria-label="Menu principal">
+        <a href="index.html">
+          <img src="src/img/logo.png" class="logo" alt="Logo Gordo Frutas" />
+        </a>
+        <ul>
+          <li><a href="fruits.html">Frutas</a></li>
+          <li><a href="about.html" aria-current="page">Sobre</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        
+      <section class="hero">
+        <div class="hero__content reveal">
+          <h1>Sobre Nós</h1>
+          <p>Conheça a história, os valores e as pessoas por trás da Gordo Frutas.</p>
+        </div>
+      </section>
+      <section class="historia" aria-labelledby="titulo-historia">
+        <div class="section-row reveal">
+          <div class="conteudo-texto">
+            <h2 id="titulo-historia">NOSSA HISTÓRIA</h2>
+            <p>
+              A Gordo Frutas nasceu em 2005, em uma pequena banca no mercado municipal de Joinville.
+              O que começou com poucas caixas de frutas selecionadas à mão cresceu até se tornar
+              referência em qualidade e confiança na região.
+            </p>
+            <p>
+              Ao longo de quase duas décadas, mantivemos um único compromisso: levar à mesa das
+              famílias apenas o que há de melhor nas hortas e pomares do Brasil. Trabalhamos
+              diretamente com produtores locais, garantindo frescor e apoiando o campo.
+            </p>
+          </div>
+          <div class="conteudo-imagem">
+            <img
+              src="src/img/mercado-antigo.jpg"
+              alt="Foto Antiga da Frutaria Gordo Frutas no Mercado Municipal de Joinville"
+            />
+          </div>
+        </div>
+      </section>
+      <article class="fundador" aria-labelledby="titulo-fundador">
+        <div class="section-row section-row--invertida reveal">
+          <div class="conteudo-texto">
+            <h2 id="titulo-fundador">FUNDADOR</h2>
+            <h3>Luiz Fernando Blume Jacinto</h3>
+            <p>
+              Nascido em Santa Catarina, Luiz aprendeu desde cedo com o pai o valor de um produto
+              bem cuidado. Aos 28 anos, com uma carroça e muita determinação, abriu sua primeira
+              banca e conquistou os clientes pelo sorriso largo e pela honestidade na balança —
+              daí o apelido carinhoso que virou nome de marca.
+            </p>
+            <p>
+              Hoje Luiz acompanha pessoalmente a seleção dos produtos, garante parcerias com
+              mais de 30 produtores rurais e ainda passa as manhãs na loja recebendo os
+              clientes de sempre.
+            </p>
+          </div>
+          <div class="conteudo-imagem conteudo-imagem--fundador">
+            <img
+              src="src/img/fundador.png"
+              alt="Luiz Fernando Blume Jacinto, fundador da Gordo Frutas"
+            />
+          </div>
+        </div>
+      </article>
     </main>
-</body>
+    <footer role="contentinfo">
+      <p><small>© 2026 - Gordo Frutas | Todos os direitos reservados</small></p>
+    </footer>
+    
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+
+  </body>
 </html>
