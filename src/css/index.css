@@ -186,13 +186,6 @@ button:focus {
     background: #39751f;
 }
 
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 30px;
-}
-
 @keyframes entrada {
     from {
         opacity: 0;
