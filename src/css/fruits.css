@@ -8,70 +8,6 @@ main {
     background: #f5f5f5;
 }
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-
-    display: flex;
-    align-items: center;
-
-    height: 120px;
-    padding: 10px 5%;
-
-    background: #4e9f2d;
-
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-nav {
-    width: 100%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.logo {
-    width: 6vw;
-    min-width: 70px;
-}
-
-nav ul {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-
-    list-style: none;
-}
-
-nav a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 10px 18px;
-
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-
-    border-radius: 10px;
-
-    transition: 0.3s;
-}
-
-nav a:hover,
-nav a:focus {
-    background: rgba(255, 255, 255, 0.15);
-
-    transform: translateY(-2px);
-}
-
 aside,
 #fruitsContainer {
     padding: 20px;
@@ -263,15 +199,6 @@ aside {
 }
 
 @media (min-width: 1600px) {
-
-    header {
-        padding: 14px 10%;
-    }
-
-    nav a {
-        font-size: 1.2rem;
-    }
-
     .cards {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
@@ -281,10 +208,6 @@ aside {
 
     main {
         grid-template-columns: 250px 1fr;
-    }
-
-    nav {
-        gap: 16px;
     }
 
     .cards {
@@ -302,40 +225,12 @@ aside {
         position: static;
     }
 
-    nav {
-        justify-content: center;
-    }
-
-    nav ul {
-        justify-content: center;
-    }
-
     .cards {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (max-width: 425px) {
-
-    header {
-        height: auto;
-        padding: 12px 5%;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul {
-        row-gap: 10px;
-        column-gap: 16px;
-    }
-
-    nav a {
-        font-size: 1.05rem;
-    }
-
     .cards {
         grid-template-columns: 1fr;
     }
@@ -350,20 +245,5 @@ aside {
 
     #minAndMaxInputs {
         grid-template-columns: 1fr !important;
-    }
-}
-
-@media (max-width: 375px) {
-
-    .logo {
-        width: 58px;
-    }
-
-    nav ul {
-        gap: 12px;
-    }
-
-    nav a {
-        font-size: 1rem;
     }
 }
