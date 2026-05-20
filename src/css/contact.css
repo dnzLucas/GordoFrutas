@@ -1,0 +1,290 @@
+body {
+    background: #f9f7f1;
+    color: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.contato {
+    display: flex;
+    gap: 40px;
+    padding: 80px 8%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.lado-esquerdo,
+.lado-direito {
+    flex: 1 1 420px;
+    min-width: 320px;
+}
+
+.lado-esquerdo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lado-esquerdo img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+.lado-direito {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.texto-contato h1 {
+    font-size: 2.8rem;
+    color: #4e9f2d;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.texto-contato p {
+    max-width: 640px;
+    color: #4d4d4b;
+    margin: 0;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 760px;
+    background: #ffffff;
+    padding: 36px;
+    border-radius: 24px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    color: #4d4d4b;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+    min-width: 0;
+    border: 1px solid #c1c3bf;
+    border-radius: 12px;
+    background: #fbfbf9;
+    padding: 16px 18px;
+    font-size: 1rem;
+    color: #222;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #6aa93f;
+    box-shadow: 0 0 0 4px rgba(78, 159, 45, 0.14);
+}
+
+textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.enviar {
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 30px;
+    border-radius: 12px;
+    background-color: #4e9f2d;
+    color: white;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.enviar:hover,
+.enviar:focus {
+    background-color: #39751f;
+    transform: translateY(-1px);
+}
+
+.horario-local {
+    display: flex;
+    gap: 40px;
+    padding: 0 8% 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.horario,
+.local {
+    flex: 1 1 420px;
+    min-width: 320px;
+}
+
+.horario {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+}
+
+.conteudo-horarios h2 {
+    color: #4e9f2d;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.conteudo-horarios p {
+    margin-bottom: 24px;
+    color: #4d4d4b;
+}
+
+.conteudo-horarios ul {
+    padding-left: 1rem;
+    margin: 0;
+}
+
+.conteudo-horarios li {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    color: #333;
+}
+
+.local {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.local iframe {
+    width: 100%;
+    min-height: 360px;
+    border: 0;
+    border-radius: 20px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 30px 8%;
+}
+
+@media (max-width: 1024px) {
+    .contato {
+        padding: 60px 6%;
+    }
+
+    .texto-contato h1 {
+        font-size: 2.4rem;
+    }
+
+    .formulario {
+        padding: 30px;
+    }
+
+    .horario-local {
+        padding: 0 6% 60px;
+    }
+
+    .local iframe {
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        justify-content: center;
+        width: 100%;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 18vw;
+    }
+
+    .contato,
+    .horario-local {
+        padding: 50px 5%;
+    }
+
+    .lado-esquerdo {
+        display: none;
+    }
+
+    .texto-contato h1 {
+        font-size: 2rem;
+    }
+
+    .local iframe {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 425px) {
+    nav {
+        align-items: center;
+    }
+
+    nav ul {
+        gap: 14px;
+    }
+
+    .logo {
+        width: 22vw;
+    }
+
+    .texto-contato h1 {
+        font-size: 1.8rem;
+    }
+
+    .formulario {
+        padding: 24px;
+    }
+
+    .enviar {
+        width: 100%;
+    }
+
+    .conteudo-horarios h2 {
+        font-size: 2rem;
+    }
+
+    .conteudo-horarios p,
+    .conteudo-horarios li {
+        font-size: 0.95rem;
+    }
+
+    .local iframe {
+        min-height: 240px;
+    }
+}
+
+@media (max-width: 375px) {
+    .texto-contato h1 {
+        font-size: 1.6rem;
+    }
+
+    .local iframe {
+        min-height: 220px;
+    }
+}
