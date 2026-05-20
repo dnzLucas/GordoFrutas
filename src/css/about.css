@@ -49,6 +49,12 @@ nav a:focus {
   opacity: 0.7;
 }
 
+nav a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
 footer {
   background: #222;
   color: white;
@@ -67,7 +73,7 @@ footer {
   transform: translateY(0);
 }
 
-.page-hero {
+.hero {
   background:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url("https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=1400&auto=format&fit=crop")
@@ -80,44 +86,36 @@ footer {
   padding: 40px 8%;
 }
 
-.page-hero-content {
+.hero__content {
   color: white;
 }
 
-.page-hero-content h1 {
+.hero__content h1 {
   font-size: 3.5rem;
   margin-bottom: 12px;
 }
 
-.page-hero-content p {
+.hero__content p {
   font-size: 1.1rem;
   opacity: 0.9;
 }
 
-.titulo {
-  text-align: center;
-  color: #4e9f2d;
-  margin-bottom: 50px;
-  font-size: 2.3rem;
-}
-
-.section-historia {
+.historia {
   padding: 90px 8%;
-  background: #fffef8;
 }
 
-.section-inner {
+.section-row {
   display: flex;
   align-items: center;
   gap: 60px;
   flex-wrap: wrap;
 }
 
-.section-inner--reverse {
+.section-row--invertida {
   flex-direction: row-reverse;
 }
 
-.text-block {
+.conteudo-texto {
   flex: 1;
   min-width: 280px;
   display: flex;
@@ -125,23 +123,28 @@ footer {
   gap: 16px;
 }
 
-.text-block h2 {
+.conteudo-texto h2 {
   font-size: 2rem;
   color: #222;
   line-height: 1.2;
 }
 
-.text-block p {
-  color: #444;
+.conteudo-texto h3 {
+  font-size: 1.3rem;
+  color: #4e9f2d;
+}
+
+.conteudo-texto p {
+  color: #333;
   font-size: 1rem;
 }
 
-.img-block {
+.conteudo-imagem {
   flex: 1;
-  min-width: 260px;
+  min-width: 280px;
 }
 
-.img-block img {
+.conteudo-imagem img {
   width: 100%;
   max-width: 520px;
   border-radius: 20px;
@@ -149,69 +152,55 @@ footer {
   display: block;
 }
 
-.section-fundador {
+.fundador {
   padding: 90px 8%;
   background: #f4faf0;
 }
 
-.img-block--fundador img {
-  border-radius: 20px;
-  max-width: 420px;
+.conteudo-imagem--fundador img {
   filter: grayscale(10%);
 }
 
-.text-block h3 {
-  font-size: 1.3rem;
-  color: #4e9f2d;
+@media (min-width: 1600px) {
+  .hero__content h1 {
+    font-size: 4.5rem;
+  }
+
+  .hero__content p {
+    font-size: 1.3rem;
+  }
+
+  .conteudo-texto h2 {
+    font-size: 2.5rem;
+  }
+
+  .historia,
+  .fundador {
+    padding: 120px 12%;
+  }
+
+  .section-row {
+    gap: 80px;
+  }
 }
 
-.section-endereco {
-  padding: 90px 8%;
-  background: #fffef8;
-}
+@media (max-width: 1024px) {
+  .logo {
+    width: 9vw;
+  }
 
-.endereco-grid {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  gap: 30px;
-}
+  .hero__content h1 {
+    font-size: 3rem;
+  }
 
-.endereco-card {
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-  padding: 36px 30px;
-  flex: 1;
-  min-width: 220px;
-  max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 12px;
-  transition: transform 0.3s;
-}
+  .historia,
+  .fundador {
+    padding: 70px 6%;
+  }
 
-.endereco-card:hover {
-  transform: translateY(-6px);
-}
-
-.endereco-icon {
-  font-size: 2.5rem;
-}
-
-.endereco-card h3 {
-  font-size: 1.1rem;
-  color: #4e9f2d;
-  font-weight: bold;
-}
-
-.endereco-card p {
-  color: #555;
-  font-size: 0.95rem;
-  line-height: 1.7;
+  .section-row {
+    gap: 40px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -227,31 +216,72 @@ footer {
     width: 18vw;
   }
 
-  .page-hero-content h1 {
+  .hero__content h1 {
     font-size: 2.2rem;
   }
 
-  .section-inner,
-  .section-inner--reverse {
+  .section-row,
+  .section-row--invertida {
     flex-direction: column;
   }
 
-  .img-block img,
-  .img-block--fundador img {
-    max-width: 100%;
-  }
-
-  .titulo {
-    font-size: 1.8rem;
-  }
-
-  .section-historia,
-  .section-fundador,
-  .section-endereco {
+  .historia,
+  .fundador {
     padding: 60px 5%;
   }
+}
 
-  .endereco-card {
-    max-width: 100%;
+@media (max-width: 425px) {
+  .logo {
+    width: 22vw;
+  }
+
+  nav a {
+    font-size: 1.1rem;
+  }
+
+  .hero {
+    height: 40vh;
+    padding: 30px 6%;
+  }
+
+  .hero__content h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero__content p {
+    font-size: 1rem;
+  }
+
+  .conteudo-texto h2 {
+    font-size: 1.7rem;
+  }
+
+  .historia,
+  .fundador {
+    padding: 50px 5%;
+  }
+}
+
+@media (max-width: 375px) {
+  nav a {
+    font-size: 1rem;
+  }
+
+  .hero__content h1 {
+    font-size: 1.6rem;
+  }
+
+  .conteudo-texto h2 {
+    font-size: 1.5rem;
+  }
+
+  .conteudo-texto h3 {
+    font-size: 1.1rem;
+  }
+
+  .historia,
+  .fundador {
+    padding: 40px 4%;
   }
 }
