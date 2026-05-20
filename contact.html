@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Gordo Frutas</title>
+    <title>About | Gordo Frutas</title>
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/contact.css">
 </head>
@@ -25,56 +25,55 @@
     <main>
         <section class="contato">
             <div class="lado-esquerdo">
-                <h1>Frutas frescas, qualidade e sabor todos os dias.
-                    Entre em contato com nossa equipe e teremos prazer em atender você!
-                </h1>
+                <img src="src/img/imagem.png" alt="imagem de frutas">
             </div>
-            <form class="lado-direito">
-                <div class="titulo-form">
-                    <h1>Entre em contato conosco pelo formulário abaixo.</h1>
-                </div>
-                <div class="campo">
-                    <input type="text" id="nome" required>
-                    <label for="nome">Nome</label>
-                </div>
-                <div class="campo">
-                    <input type="tel" id="telefone" required>
-                    <label for="telefone">Telefone</label>
-                </div>
-                <div class="campo">
-                    <input type="email" id="email" required>
-                    <label for="email">E-mail</label>
-                </div>
-                <div class="campo">
-                    <textarea placeholder="Mensagem"></textarea>
-                </div>
+            <div class="lado-direito">
+                <h1>Entre em contato conosco pelo formulário abaixo.</h1>
+                <div class="formulario">
 
-                <button type="submit" class="enviar">
-                    ENVIAR MENSAGEM
-                </button>
-            </form>
-        </section>
-        <section class="contato">
-            <div class="lado-esquerdo-horario">
-                <section class="horarios">
-                    <div class="conteudo-horarios">
-                        <h2>Horários de Funcionamento</h2>
-
-                        <p>
-                            Trabalhamos diariamente para garantir frutas frescas
-                            e atendimento de qualidade.
-                        </p>
-
-                        <ul>
-                            <li><strong>Segunda a Sexta:</strong> 07h às 19h</li>
-                            <li><strong>Sábado:</strong> 07h às 16h</li>
-                            <li><strong>Domingo:</strong> 08h às 12h</li>
-                        </ul>
+                    <div class="campo">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" required>
                     </div>
-                </section>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem"></textarea>
+                    </div>
+
+                    <button type="submit" class="enviar">
+                        ENVIAR MENSAGEM
+                    </button>
+
+                </div>
             </div>
-            <form class="lado-direito">
-            </form>
+        </section>
+        <section class="horario-local">
+            <div class="horario">
+                <div class="conteudo-horarios">
+                    <h2>Horários de Funcionamento</h2>
+
+                    <p>
+                        Trabalhamos diariamente para garantir frutas frescas
+                        e atendimento de qualidade.
+                    </p>
+                    <ul>
+                        <li><strong>Segunda a Sexta:</strong> 07h às 19h</li>
+                        <li><strong>Sábado:</strong> 07h às 16h</li>
+                        <li><strong>Domingo:</strong> 08h às 12h</li>
+                    </ul>
+                </div>
+            </div>
             <div class="local">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114505.72435379567!2d-49.00781530273434!3d-26.251799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deafa479f2814f%3A0x2478f66c31fd2343!2sUNIVILLE%20-%20JOINVILLE%20REGION%20UNIVERSITY%20(FURJ)!5e0!3m2!1sen!2sbr!4v1779065468355!5m2!1sen!2sbr"
@@ -82,6 +81,7 @@
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
+
     </main>
     <footer>
         <p>© 2026 - Gordo Frutas | Todos os direitos reservados</p>

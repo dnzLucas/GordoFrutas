@@ -1,21 +1,10 @@
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #f4f7f1;
-    color: #222;
-    line-height: 1.6;
-}
-
-header {
+header{
     background: #4e9f2d;
     padding: 10px 5%;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);}
 
 nav {
     display: flex;
@@ -38,7 +27,7 @@ nav ul {
 
 nav a {
     font-size: 1.3rem;
-    color: #f4f7f1;
+    color: white;
     text-decoration: none;
     transition: 0.3s;
     font-weight: bold;
@@ -49,165 +38,110 @@ nav a:focus {
     opacity: 0.7;
 }
 
+.hero {
+    height: 90vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("https://images.unsplash.com/photo-1619566636858-adf3ef46400b?q=80&w=1400&auto=format&fit=crop") center/cover;
 
-.contato {
     display: flex;
-    position: left;
-}
-
-
-.lado-esquerdo {
-    flex: 1;
-    position: relative;
-    background-image: url(../img/contact-background.jpg);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    padding: 10px;
-    align-items: center;
     justify-content: center;
-
+    align-items: center;
+    padding: 40px 8%;
 }
 
-.lado-esquerdo .imagem-frutas {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.lado-esquerdo h1 {
-    color: white;
-    text-shadow: 1px 1px 6px black;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 300px;
-}
-
-.lado-direito {
-    flex: 1;
+.hero-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 16px;
-    padding: 60px 40px;
-    background-color: #f4f7f1;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    color: white;
+    animation: entrada 1s ease;
 }
 
-.horarios {
-    background-color: #f4f7f1;
-    padding: 60px 40px;
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.hero a {
+    background: #4e9f2d;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.hero a:hover,
+.hero a:focus {
+    background: #39751f;
+}
+main{
+    height:100vh;
+    
+}
+.contato{
     display: flex;
+    width: 100%;
+    height: 50%;
+}
+.lado-esquerdo{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding-top: 60px;
+}
+.lado-esquerdo img{
+    width: 50%;
+}
+.lado-direito{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 70px;
 }
-
-.conteudo-horarios {
-    max-width: 768px;
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.conteudo-horarios h2 {
+.lado-direito h1 {
+    text-align: center;
+    height: 40px;
+    font-size: 40px;
+    margin-bottom: 50px;
     color: #4E9F2D;
-    font-size: 32px;
-    margin-bottom: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    
 }
-
-.conteudo-horarios p {
-    margin-bottom: 20px;
-    color: #444;
-    line-height: 1.7;
-}
-
-.conteudo-horarios ul {
-    list-style: none;
-    padding: 0;
-}
-
-.conteudo-horarios li {
-    margin-bottom: 12px;
-    font-size: 18px;
-    color: #222;
-}
-
-.titulo-form {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 30px;
-
-
-
-}
-
-.enviar {
-    background-color: #4E9F2D;
-    color: white;
-    border: none;
-    padding: 14px 32px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.enviar:hover {
-    background-color: #3a7a20;
-}
-
 .campo {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 label {
+    text-align: left;
     color: #7d7e7d;
-    padding: 0 5px;
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
-    left: 1em;
-    pointer-events: none;
-    transition: .3s;
+    font-size: 1rem;
 }
 
 input {
-    color: black;
-    border: 1px solid #c1c3bf;
-    background: white;
-    border-radius: 5px;
-    width: 100%;
-
-    box-sizing: border-box;
+    width: 600px;
     height: 50px;
-
+    border: 1px solid #c1c3bf;
+    border-radius: 5px;
     padding: 0 1rem;
-    outline: none;
-    cursor: pointer;
+    
 }
-
-input:focus~label,
-input:valid~label {
-    top: 0;
-    background: white;
-    font-size: 0.7rem;
-}
-
-@media (max-width:768px) {
-    .lado-esquerdo {
-        display: none;
-    }
-
-}
-
-.local {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-    background-color: #f4f7f1;
-}
-
-
 .campo textarea {
     width: 100%;
     height: 100px;
@@ -218,20 +152,79 @@ input:valid~label {
     padding: 1rem;
     font-size: 16px;
 }
+.enviar{
+    border: 2px;
+    margin: 20px 40px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #4e9f2d;
+    color: white;
+    font-weight: 700;
+}
 
-.local {
+.horario-local{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.horario{
+    width: 50%;
+    height: 100%;
+
+}
+.horario-local{
+    display: flex;
+    width: 100%;
+    height: 50%;
+
+}
+.horarios {
+    background-color: #f4f7f1;
+    padding: 60px 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
-    gap: 30px;
 }
 
+.conteudo-horarios {
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.conteudo-horarios h2 {
+    color: #4E9F2D;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: start;
+}
+
+.conteudo-horarios p {
+    margin-bottom: 20px;
+    text-align: start;
+}
+
+.conteudo-horarios ul {
+    padding: 20px;
+}
+
+.conteudo-horarios li {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+.local {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .local iframe {
-    width: 900px;
-    height: 300px;
-    max-width: 100%;
+    width: 90%;
+    height:350px;
+
     border-radius: 10px;
 }
 
@@ -240,4 +233,159 @@ footer {
     color: white;
     text-align: center;
     padding: 30px;
+}
+@media (max-width: 1024px) {
+
+    .contato {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .lado-esquerdo,
+    .lado-direito {
+        width: 100%;
+    }
+
+    .lado-esquerdo {
+        padding-top: 30px;
+    }
+
+    .lado-esquerdo img {
+        width: 40%;
+    }
+
+    .lado-direito {
+        padding: 40px 20px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+    }
+
+    .formulario {
+        width: 90%;
+    }
+
+    .horario-local {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .horario,
+    .local {
+        width: 100%;
+    }
+
+    .local {
+        padding: 20px;
+    }
+
+    .local iframe {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .lado-esquerdo {
+        display: none;
+    }
+
+    .lado-direito {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .lado-direito h1 {
+        font-size: 32px;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+    }
+
+    .logo {
+        width: 14vw;
+    }
+
+    .conteudo-horarios {
+        padding: 20px;
+    }
+
+    .conteudo-horarios h2 {
+        font-size: 32px;
+    }
+
+    .conteudo-horarios li {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .logo {
+        width: 22vw;
+    }
+
+    .lado-direito h1 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .enviar {
+        width: 100%;
+    }
+
+    .conteudo-horarios h2 {
+        font-size: 26px;
+    }
+
+    .conteudo-horarios p,
+    .conteudo-horarios li {
+        font-size: 16px;
+    }
+
+    .local iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .lado-direito h1 {
+        font-size: 20px;
+    }
+
+    .conteudo-horarios {
+        padding: 15px;
+    }
+
+    .local iframe {
+        height: 220px;
+    }
 }
