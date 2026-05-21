@@ -184,6 +184,10 @@ footer {
     padding: 30px 8%;
 }
 
+#mensagem{
+    resize: none;
+}
+
 @media (max-width: 1024px) {
     .contato {
         padding: 60px 6%;
