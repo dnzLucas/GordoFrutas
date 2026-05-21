@@ -47,9 +47,7 @@ aside {
             display: flex;
             align-items: center;
             gap: 8px;
-
             cursor: pointer;
-
             transition: 0.2s;
         }
 
@@ -69,9 +67,7 @@ aside {
 
         input[type="range"] {
             width: 100%;
-
             accent-color: #4e9f2d;
-
             cursor: pointer;
         }
 
@@ -84,9 +80,7 @@ aside {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10px;
-
             width: 100%;
-
             input {
                 width: 100%;
             }
@@ -95,18 +89,14 @@ aside {
 
     input {
         padding: 8px;
-
         border: 1px solid #ccc;
         border-radius: 8px;
-
         transition: 0.2s;
     }
 
     input:focus {
         outline: none;
-
         border-color: #4e9f2d;
-
         box-shadow: 0 0 5px rgba(78, 159, 45, 0.3);
     }
 
@@ -122,14 +112,10 @@ aside {
 
         button {
             padding: 10px;
-
             font-weight: bold;
-
             border: none;
             border-radius: 8px;
-
             cursor: pointer;
-
             transition: 0.2s;
         }
 
@@ -145,7 +131,6 @@ aside {
 
         button:hover {
             opacity: 0.9;
-
             transform: translateY(-2px);
         }
     }
@@ -161,22 +146,18 @@ aside {
 
 .cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
-}
+}   
 
 .card {
     display: grid;
     grid-template-rows: 220px 1fr;
-
     overflow: hidden;
-
     background: white;
     border-radius: 20px;
-
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-
-    transition: 0.3s;
+    /* transition: 0.3s; */
 }
 
 .card:hover {
@@ -186,7 +167,6 @@ aside {
 .card img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
 }
 
@@ -194,29 +174,10 @@ aside {
     display: grid;
     align-content: start;
     gap: 10px;
-
     padding: 20px;
 }
 
-@media (min-width: 1600px) {
-    .cards {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-}
-
-@media (max-width: 1024px) {
-
-    main {
-        grid-template-columns: 250px 1fr;
-    }
-
-    .cards {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
 @media (max-width: 768px) {
-
     main {
         grid-template-columns: 1fr;
     }
@@ -224,17 +185,9 @@ aside {
     aside {
         position: static;
     }
-
-    .cards {
-        grid-template-columns: 1fr 1fr;
-    }
 }
 
 @media (max-width: 425px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
     .card {
         width: 100%;
     }
