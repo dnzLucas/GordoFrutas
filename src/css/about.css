@@ -10,13 +10,27 @@ body {
 
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(30px);
+  animation: fadeReveal 1s ease forwards;
 }
 
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
+.hero__content {
+  animation-delay: 0.2s;
+}
+
+.historia .reveal {
+  animation-delay: 0.5s;
+}
+
+.fundador .reveal {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero {
@@ -69,7 +83,7 @@ body {
   gap: 16px;
 }
 
-.conteudo-texto h2 {
+s.conteudo-texto h2 {
   font-size: 2rem;
   color: #222;
   line-height: 1.2;
@@ -100,7 +114,7 @@ body {
 
 .fundador {
   padding: 90px 8%;
-  background: #f4faf0;
+  background: #dbf1d3;
 }
 
 .conteudo-imagem--fundador img {
