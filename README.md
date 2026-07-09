@@ -1,59 +1,166 @@
-# GordoFrutas
+# 🍎 Gordo Frutas
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.18.
+Projeto desenvolvido em **Angular** para representar uma frutaria fictícia chamada **Gordo Frutas**. O objetivo é apresentar um catálogo de frutas de forma moderna, responsiva e componentizada, aplicando boas práticas de desenvolvimento Front-end.
 
-## Development server
+## 📖 Sobre o projeto
 
-To start a local development server, run:
+O Gordo Frutas é um site institucional composto por diferentes páginas que apresentam a empresa, seu catálogo de produtos e um canal de contato com os clientes.
+
+O projeto foi desenvolvido com foco em:
+
+- Componentização utilizando Angular;
+- Responsividade para diferentes tamanhos de tela;
+- Organização do código;
+- Reutilização de componentes;
+- Separação entre estrutura, lógica e estilos.
+
+---
+
+## 🚀 Tecnologias utilizadas
+
+- Angular
+- TypeScript
+- HTML5
+- CSS3
+
+---
+
+## 📁 Estrutura do projeto
+
+```text
+src/
+│
+├── app/
+│   ├── components/
+│   │   ├── card/
+│   │   ├── filter/
+│   │   ├── layout/
+│   │   │   ├── header/
+│   │   │   └── footer/
+│   │   ├── hero/
+│   │   ├── fruit-list/
+│   │   ├── fruits-container/
+│   │   └── ...
+│   │
+│   ├── pages/
+│   │   ├── home/
+│   │   ├── fruits/
+│   │   ├── about/
+│   │   └── contact/
+│   │
+│   ├── app.routes.ts
+│   └── app.ts
+│
+└── assets/
+```
+
+---
+
+## 📄 Páginas
+
+### 🏠 Home
+
+Página inicial contendo:
+
+- Hero principal
+- Destaque para frutas mais vendidas
+- Navegação para as demais páginas
+
+---
+
+### 🍊 Frutas
+
+Catálogo de frutas contendo:
+
+- Cards reutilizáveis
+- Painel de filtros
+- Organização em Grid responsivo
+
+---
+
+### 📖 Sobre
+
+Apresenta informações da empresa, incluindo:
+
+- História
+- Missão
+- Fundador
+
+---
+
+### 📞 Contato
+
+Página destinada ao contato dos clientes contendo:
+
+- Formulário
+- Horários de funcionamento
+- Localização através do Google Maps
+
+---
+
+## 🧩 Componentização
+
+O projeto foi desenvolvido utilizando componentes reutilizáveis.
+
+Exemplos:
+
+- Header
+- Footer
+- Hero
+- Card
+- Fruit List
+- Filter
+
+Essa abordagem facilita manutenção, reutilização e organização do código.
+
+---
+
+## 📱 Responsividade
+
+O layout foi adaptado para diferentes dispositivos utilizando Media Queries.
+
+O projeto possui adaptações para:
+
+- Desktop
+- Tablets
+- Smartphones
+
+---
+
+## ▶️ Executando o projeto
+
+Clone o repositório:
+
+```bash
+git clone <url-do-repositorio>
+```
+
+Entre na pasta:
+
+```bash
+cd GordoFrutas
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute a aplicação:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Depois acesse:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 👨‍💻 Autor
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Desenvolvido por **Lucas Diniz** como projeto de estudos utilizando Angular.
