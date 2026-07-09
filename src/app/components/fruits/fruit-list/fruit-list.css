@@ -1,0 +1,23 @@
+:host {
+    padding: 20px;
+}
+
+.fruitList {
+    width: 100%;
+    line-height: 1.6;
+    border-radius: 15px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 20px;
+    }
+}
