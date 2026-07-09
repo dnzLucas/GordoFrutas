@@ -1,13 +1,17 @@
 <div class="fruitList">
-  <div class="cards">
-  @for (fruit of fruits; track fruit.title) {
-    <app-card
-    [title]="fruit.title"
-    [description]="fruit.description"
-    [image]="fruit.image"
-    [alt]="fruit.alt">
-    </app-card>
+  @if (fruits().length > 0) {
+    <div class="cards">
+      @for (fruit of fruits(); track fruit.title) {
+        <app-card
+          [title]="fruit.title"
+          [description]="fruit.description"
+          [image]="fruit.image"
+          [alt]="fruit.alt"
+        >
+        </app-card>
+      }
+    </div>
+  } @else {
+    <p class="emptyState">Nenhuma fruta encontrada para os filtros selecionados.</p>
   }
-</div>
-
 </div>

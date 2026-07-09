@@ -1,121 +1,113 @@
 <aside aria-label="Filtros de frutas">
-
   <h2>Filtros</h2>
 
-  <div class="filterBox">
-
+  <form (submit)="$event.preventDefault(); applyFilters()">
+    <div class="filterBox">
       <h3>Pesquisar</h3>
 
-      <label for="searchFruit">
-          Buscar fruta
-      </label>
+      <label for="searchFruit"> Buscar fruta </label>
 
       <input
-          type="text"
-          id="searchFruit"
-          placeholder="Buscar fruta..."
-      >
+        type="text"
+        id="searchFruit"
+        name="searchFruit"
+        placeholder="Buscar fruta..."
+        [value]="searchTerm()"
+        (input)="onSearchInput($event)"
+      />
+    </div>
 
-  </div>
-
-  <div class="filterBox" id="fruitTypes">
-
+    <div class="filterBox" id="fruitTypes">
       <h3>Tipos de fruta</h3>
 
-      <label for="citrica">
-          <input type="checkbox" id="citrica">
-          Cítricas
-      </label>
+      @for (category of categoryOptions; track category.value) {
+        <label [for]="category.value">
+          <input
+            type="checkbox"
+            [id]="category.value"
+            [name]="category.value"
+            [checked]="isCategorySelected(category.value)"
+            (change)="onCategoryToggle(category.value, $event)"
+          />
+          {{ category.label }}
+        </label>
+      }
+    </div>
 
-      <label for="tropical">
-          <input type="checkbox" id="tropical">
-          Tropicais
-      </label>
-
-      <label for="vermelha">
-          <input type="checkbox" id="vermelha">
-          Frutas Vermelhas
-      </label>
-
-      <label for="exotica">
-          <input type="checkbox" id="exotica">
-          Exóticas
-      </label>
-
-      <label for="organica">
-          <input type="checkbox" id="organica">
-          Orgânicas
-      </label>
-
-  </div>
-
-  <div class="filterBox" id="priceRange">
-
+    <div class="filterBox" id="priceRange">
       <h3>Preço</h3>
 
-      <label for="price">
-          Faixa de preço
-      </label>
+      <label for="price"> Faixa de preço (até R$ {{ maxPrice() }}) </label>
 
       <input
-          type="range"
-          id="price"
-          min="0"
-          max="100"
-      >
+        type="range"
+        id="price"
+        name="price"
+        [min]="priceRangeMin"
+        [max]="priceRangeMax"
+        [value]="maxPrice()"
+        (input)="onPriceRangeInput($event)"
+      />
 
       <div id="minAndMaxInputs">
+        <label for="minPrice"> Valor mínimo </label>
 
-          <label for="minPrice">
-              Valor mínimo
-          </label>
+        <input
+          type="number"
+          id="minPrice"
+          name="minPrice"
+          placeholder="Mín"
+          [min]="priceRangeMin"
+          [max]="priceRangeMax"
+          [value]="minPrice()"
+          (input)="onMinPriceInput($event)"
+        />
 
-          <input
-              type="text"
-              id="minPrice"
-              placeholder="Mín"
-          >
+        <label for="maxPrice"> Valor máximo </label>
 
-          <label for="maxPrice">
-              Valor máximo
-          </label>
-
-          <input
-              type="text"
-              id="maxPrice"
-              placeholder="Máx"
-          >
-
+        <input
+          type="number"
+          id="maxPrice"
+          name="maxPrice"
+          placeholder="Máx"
+          [min]="priceRangeMin"
+          [max]="priceRangeMax"
+          [value]="maxPrice()"
+          (input)="onMaxPriceInput($event)"
+        />
       </div>
+    </div>
 
-  </div>
-
-  <div class="filterBox">
-
+    <div class="filterBox">
       <h3>Disponibilidade</h3>
 
       <label for="stock">
-          <input type="checkbox" id="stock">
-          Em estoque
+        <input
+          type="checkbox"
+          id="stock"
+          name="stock"
+          [checked]="onlyInStock()"
+          (change)="onStockToggle($event)"
+        />
+        Em estoque
       </label>
 
       <label for="promo">
-          <input type="checkbox" id="promo">
-          Promoção
+        <input
+          type="checkbox"
+          id="promo"
+          name="promo"
+          [checked]="onlyPromo()"
+          (change)="onPromoToggle($event)"
+        />
+        Promoção
       </label>
+    </div>
 
-  </div>
+    <div id="filterButtons">
+      <button type="submit">Aplicar filtros</button>
 
-  <div id="filterButtons">
-
-      <button type="button">
-          Aplicar filtros
-      </button>
-
-      <button type="reset">
-          Limpar filtros
-      </button>
-
-  </div>
-
+      <button type="button" (click)="clearFilters()">Limpar filtros</button>
+    </div>
+  </form>
 </aside>
