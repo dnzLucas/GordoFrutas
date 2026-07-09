@@ -1,0 +1,12 @@
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+section{
+  padding: 80px 8%;
+
+}

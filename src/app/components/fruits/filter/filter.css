@@ -1,0 +1,146 @@
+aside,
+#fruitsContainer {
+    padding: 20px;
+}
+
+aside {
+    position: sticky;
+    top: 140px;
+
+    display: grid;
+    align-self: start;
+    gap: 25px;
+
+    height: fit-content;
+
+    background: white;
+    border-radius: 10px;
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+
+    #fruitTypes,
+    #priceRange {
+        display: grid;
+        gap: 10px;
+    }
+
+    #fruitTypes {
+
+        h4 {
+            margin-bottom: 5px;
+
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        label:hover {
+            color: #4e9f2d;
+        }
+    }
+
+    #priceRange {
+
+        h4 {
+            margin-bottom: 5px;
+
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            accent-color: #4e9f2d;
+            cursor: pointer;
+        }
+
+        label {
+            display: grid;
+            gap: 10px;
+        }
+
+        #minAndMaxInputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            width: 100%;
+            input {
+                width: 100%;
+            }
+        }
+    }
+
+    input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        transition: 0.2s;
+    }
+
+    input:focus {
+        outline: none;
+        border-color: #4e9f2d;
+        box-shadow: 0 0 5px rgba(78, 159, 45, 0.3);
+    }
+
+    .filterBox {
+        display: grid;
+        gap: 8px;
+    }
+
+    #filterButtons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+
+        button {
+            padding: 10px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:first-child {
+            background: #4e9f2d;
+            color: white;
+        }
+
+        button:last-child {
+            background: #ececec;
+            color: #333;
+        }
+
+        button:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    :host {
+        padding: 15px;
+    }
+
+    aside {
+        position: static;
+    }
+
+    #minAndMaxInputs {
+        grid-template-columns: 1fr;
+    }
+
+    #filterButtons {
+        grid-template-columns: 1fr;
+    }
+}
+  

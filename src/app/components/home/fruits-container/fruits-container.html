@@ -1,0 +1,12 @@
+<section id="fruits">
+    <div class="cards">
+      @for (fruit of fruits; track fruit.title) {
+        <app-card
+        [title]="fruit.title"
+        [description]="fruit.description"
+        [image]="fruit.image"
+        [alt]="fruit.alt">
+        </app-card>
+      }
+    </div>
+</section>

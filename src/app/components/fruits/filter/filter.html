@@ -1,0 +1,121 @@
+<aside aria-label="Filtros de frutas">
+
+  <h2>Filtros</h2>
+
+  <div class="filterBox">
+
+      <h3>Pesquisar</h3>
+
+      <label for="searchFruit">
+          Buscar fruta
+      </label>
+
+      <input
+          type="text"
+          id="searchFruit"
+          placeholder="Buscar fruta..."
+      >
+
+  </div>
+
+  <div class="filterBox" id="fruitTypes">
+
+      <h3>Tipos de fruta</h3>
+
+      <label for="citrica">
+          <input type="checkbox" id="citrica">
+          Cítricas
+      </label>
+
+      <label for="tropical">
+          <input type="checkbox" id="tropical">
+          Tropicais
+      </label>
+
+      <label for="vermelha">
+          <input type="checkbox" id="vermelha">
+          Frutas Vermelhas
+      </label>
+
+      <label for="exotica">
+          <input type="checkbox" id="exotica">
+          Exóticas
+      </label>
+
+      <label for="organica">
+          <input type="checkbox" id="organica">
+          Orgânicas
+      </label>
+
+  </div>
+
+  <div class="filterBox" id="priceRange">
+
+      <h3>Preço</h3>
+
+      <label for="price">
+          Faixa de preço
+      </label>
+
+      <input
+          type="range"
+          id="price"
+          min="0"
+          max="100"
+      >
+
+      <div id="minAndMaxInputs">
+
+          <label for="minPrice">
+              Valor mínimo
+          </label>
+
+          <input
+              type="text"
+              id="minPrice"
+              placeholder="Mín"
+          >
+
+          <label for="maxPrice">
+              Valor máximo
+          </label>
+
+          <input
+              type="text"
+              id="maxPrice"
+              placeholder="Máx"
+          >
+
+      </div>
+
+  </div>
+
+  <div class="filterBox">
+
+      <h3>Disponibilidade</h3>
+
+      <label for="stock">
+          <input type="checkbox" id="stock">
+          Em estoque
+      </label>
+
+      <label for="promo">
+          <input type="checkbox" id="promo">
+          Promoção
+      </label>
+
+  </div>
+
+  <div id="filterButtons">
+
+      <button type="button">
+          Aplicar filtros
+      </button>
+
+      <button type="reset">
+          Limpar filtros
+      </button>
+
+  </div>
+
+</aside>
